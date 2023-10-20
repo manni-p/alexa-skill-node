@@ -1,0 +1,48 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "SpokenWords",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "AdviceIntent",
+          "samples": [
+            "can you give me more information on {SpokenWords}",
+            "what should I do in {SpokenWords}",
+            "help me with {SpokenWords}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "RegionIntent",
+          "samples": [
+            "what is my energy status",
+            "is there a power cut in my area"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "open app"
+    }
+  }
+}
