@@ -16,36 +16,25 @@
                     "samples": []
                 },
                 {
-                    "name": "AdviceIntent",
-                    "slots": [
-                        {
-                            "name": "SpokenWords",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
-                    "samples": [
-                        "what should I do in {SpokenWords}",
-                        "help me with a {SpokenWords}"
-                    ]
-                },
-                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 },
                 {
-                    "name": "TestIntent",
-                    "slots": [
-                        {
-                            "name": "SpokenWords",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
+                    "name": "RegionIntent",
+                    "slots": [],
                     "samples": [
-                        "test with {SpokenWords}"
+                        "what is my energy status"
+                    ]
+                },
+                {
+                    "name": "BoilerIntent",
+                    "slots": [],
+                    "samples": [
+                        "how to refill my boiler"
                     ]
                 }
             ],
             "types": []
         }
     }
-  }
+}

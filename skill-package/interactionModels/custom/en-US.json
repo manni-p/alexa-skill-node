@@ -1,51 +1,40 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "open app",
-          "intents": [
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AdviceIntent",
-                  "slots": [
-                      {
-                          "name": "SpokenWords",
-                          "type": "AMAZON.SearchQuery"
-                      }
-                  ],
-                  "samples": [
-                      "what should I do in {SpokenWords}",
-                      "help me with a {SpokenWords}"
-                  ]
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              },
-              {
-                  "name": "TestIntent",
-                  "slots": [
-                      {
-                          "name": "SpokenWords",
-                          "type": "AMAZON.SearchQuery"
-                      }
-                  ],
-                  "samples": [
-                      "test with {SpokenWords}"
-                  ]
-              }
-          ],
-          "types": []
-      }
-  }
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "open app",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RegionIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is my energy status"
+                    ]
+                },
+                {
+                    "name": "BoilerIntent",
+                    "slots": [],
+                    "samples": [
+                        "how to refill my boiler"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
 }
