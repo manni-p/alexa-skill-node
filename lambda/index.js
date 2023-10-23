@@ -128,45 +128,6 @@ const BoilerIntentHandler = {
     }
 };
 
-
-const ElisaIntentHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ElisaIntent';
-    },
-    async handle(handlerInput) {
-        
-            
-        const link = 'https://example.com';
-        const notification = {
-            type: 'Simple',
-            title: 'Check this out!',
-            content: 'Here is a link for you: ' + link
-        };
-
-        const uniqueToken = "1234-12121-2121121"; // Generate a unique token
-
-        const responseBuilder = handlerInput.responseBuilder;
-        responseBuilder.addDirective({
-            type: 'Connections.SendRequest',
-            name: 'Suggest',
-            payload: {
-                target: {
-                    recipientId: 'alexa::renderTemplate',
-                },
-                notification: notification
-            },
-            token: uniqueToken, // Include the unique token
-        });
-
-        // Store the unique token and associate it with the notification for future reference
-
-        return responseBuilder.getResponse();
-            
-            
-        }
-};
-
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -277,7 +238,6 @@ const ErrorHandler = {
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
-        AdviceIntentHandler,
         RegionIntentHandler,
         BoilerIntentHandler,
         HelpIntentHandler,
